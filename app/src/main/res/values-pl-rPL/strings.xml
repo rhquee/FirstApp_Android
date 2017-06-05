@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Moja pierwsza aplikacja!</string>
+    <string name="next">Dalej</string>
+    <string name="permissions_text">Zobacz swoje uprawnienia</string>
+    <string name="permissions_button">Uprawnienia</string>
+    <string name="resources_fun_button">Zabawa zasobami</string>
+</resources>

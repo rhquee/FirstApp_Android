@@ -11,8 +11,9 @@ import android.widget.EditText;
 public class MainActivity extends AppCompatActivity {
 
     private EditText editText;
-    private Button button;
+    private Button openHelloActivityButton;
     private Button openPermisionsButton;
+    private Button resourcesFunButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,23 +22,29 @@ public class MainActivity extends AppCompatActivity {
         Log.d("Lifecircle", "onCreate");
 
         editText = (EditText) findViewById(R.id.editText);
-        button = (Button) findViewById(R.id.button);
+        openHelloActivityButton = (Button) findViewById(R.id.main_openHelloActivityButton);
         openPermisionsButton = (Button) findViewById(R.id.main_OpenPermissionsButton);
-
-        button.setOnClickListener(new View.OnClickListener() {
-                                      @Override
-                                      public void onClick(View v){
-                                          openHelloActivity();
-                                      }
-                                  });
-
-        openPermisionsButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openPermisionsButton();
-            }
-        });
+        resourcesFunButton = (Button) findViewById(R.id.main_ResourcesFunButton);
 }
+
+    public void onButtonClick(View view){
+        switch (view.getId()){
+            case R.id.main_OpenPermissionsButton: openPermisionsButton();
+                break;
+            case R.id.main_openHelloActivityButton: openHelloActivity();
+                break;
+            case R.id.main_ResourcesFunButton: resourcesFunButton();
+                break;
+            default:Log.e("Blad", "Niewspierany przycisk");
+                break;
+        }
+    }
+
+    private void resourcesFunButton() {
+        Intent intent = new Intent(this, ResourcesActivity.class);
+        startActivity(intent);
+    }
+
 
     private void openPermisionsButton() {
         Intent intent = new Intent(this, PermissionActivity.class);

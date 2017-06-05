@@ -20,20 +20,32 @@
         android:id="@+id/editText" />
 
     <Button
-        android:text="Dalej"
+        android:text="@string/next"
+        android:onClick="onButtonClick"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button" />
+        android:id="@+id/main_openHelloActivityButton" />
 
     <TextView
-        android:text="Poniżej zobacz uprawnienia:"
+        android:text="@string/permissions_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/textView2" />
 
     <Button
-        android:text="Uprawnienia"
+        android:background="@drawable/button_selector"
+        android:textColor="@android:color/holo_purple"
+        android:text="@string/permissions_button"
+        android:onClick="onButtonClick"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/main_OpenPermissionsButton" />
+
+    <Button
+        android:text="@string/resources_fun_button"
+        android:onClick="onButtonClick"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/main_ResourcesFunButton" />
+
 </LinearLayout>

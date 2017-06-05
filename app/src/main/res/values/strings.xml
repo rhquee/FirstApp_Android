@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">FirstApp</string>
+    <string name="next">Next</string>
+    <string name="permissions_text">Look at your permissions</string>
+    <string name="permissions_button">Permissions</string>
+    <string name="resources_fun_button">Fun with resources</string>
 </resources>
